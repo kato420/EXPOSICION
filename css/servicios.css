@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* General layout */
+.general {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 15px;
+  background-color: #161b22;
+  color: #f0f6fc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-horario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dark-l {
+  cursor: pointer;
+  background-color: #e5be01;
+  border: 2px white solid;
+  border-radius: 15px;
+}
+
+.dark-l:hover {
+  opacity: 0.7;
+}
+
+.dark-l:active {
+  opacity: 0.5;
+  background-color: #3e5f8a;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007ba7;
+  padding: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-menu a:hover {
+  background-color: #004c70;
+  border-radius: 5px;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  width: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #007ba7;
+  list-style: none;
+  padding: 0;
+  z-index: 1000; /* Traer el menú por encima de otros elementos */
+}
+
+.dropdown-content li a {
+  padding: 10px;
+}
+
+.dropdown-content li a:hover {
+  background-color: #004c70;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main content */
+.content {
+  flex: 1;
+  background-image: url("../imgs/servicios.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  background-color: #161b22;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .section-nosotros {
+  background: rgba(0, 0, 0, 0.6); 
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px; 
+  color: #f0f6fc; 
+} */
+.section-nosotros {
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px; /* Limitar el ancho para mejorar la legibilidad */
+  color: #f0f6fc; /* Color de texto */
+  opacity: 0; /* Empieza invisible */
+  transform: translateY(30px); /* Comienza un poco desplazado hacia abajo */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transición suave */
+}
+
+.section-nosotros.visible {
+  opacity: 1; /* Aparece completamente */
+  transform: translateY(0); /* Vuelve a su posición original */
+}
+
+.section-nosotros h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-nosotros p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+/* Footer */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: rgba(73, 64, 94, 0.582);
+  padding: 20px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  width: 23%;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-column p {
+  margin: 5px 0;
+}
+
+.footer-column i {
+  color: #007ba7;
+}
+
+.footer-payment-icons {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer-payment-icons img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.footer-complaint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
